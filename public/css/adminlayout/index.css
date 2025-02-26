@@ -1,0 +1,65 @@
+.navbar {
+    background-color: #0d2446;
+}
+
+.navbar-brand,
+.navbar a,
+.navbar span {
+    color: white !important;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    background-color: #1e1e2d;
+    /* Xám đậm */
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #27293d;
+    /* Màu xám nhạt khi hover */
+}
+
+/* Đẩy nội dung chính sang phải */
+.content {
+    margin-left: 250px;
+    margin-top: 56px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    /* Nền sáng */
+    min-height: 100vh;
+}
+
+/* Ảnh đại diện */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Nút đăng xuất */
+.logout-btn {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}

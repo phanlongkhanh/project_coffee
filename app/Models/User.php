@@ -21,6 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
+        'address',
+        'banned',
+        'image',
+        'role_id',
     ];
 
     /**
@@ -42,4 +47,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isAdmin()
+    {
+        return $this->id_role == 1;
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }
