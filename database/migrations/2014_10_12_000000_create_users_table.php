@@ -16,6 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->unsignedBigInteger('id_role')->default(2)->comment('Phân quyền');
+            $table->string('address')->default('Chưa cập nhật')->comment('địa chỉ');
+            $table->string(column: 'image')->default(value: 'profile.jpg');
+            $table->string('phone');
+            $table->boolean('banned')->default(true)->comment('Banned người dùng');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
