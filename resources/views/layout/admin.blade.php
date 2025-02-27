@@ -20,9 +20,9 @@
 
         <!-- Thông tin người dùng -->
         <div class="d-flex align-items-center">
-            <img src="#" class="avatar me-2" alt="Avatar">
-            <span class="me-3">Phan Long Khánh</span>
-            <a href="#" class="logout-btn">Đăng Xuất</a>
+            {{-- <img src="{{ asset('images/' . (auth()->user()->image ?? 'profile.jpg')) }}" class="avatar me-2" alt="Avatar"> --}}
+            <span class="me-3 ml-5">{{ auth()->user()->name ?? 'Khách' }}</span>
+            <a href="{{route('logout')}}" class="logout-btn">Đăng Xuất</a>
         </div>
     </div>
 </nav>
