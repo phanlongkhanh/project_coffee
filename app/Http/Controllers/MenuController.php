@@ -11,18 +11,39 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class MenuController extends Controller
 {
     public function index()
     {
+        $user = auth()->user();
+
+        if (!$user || $user->id_role != 1) {
+            return redirect('/')->with('error', 'Bạn không có quyền truy cập trang này');
+        }
+
+        if (!Auth::check()) {
+            return redirect()->route('index-login')->with('error', 'Vui lòng đăng nhập để tiếp tục.');
+        }
+
         $menus = Menu::all();
         return view('admin.menu.index', compact('menus'));
     }
 
     public function create()
     {
+        $user = auth()->user();
+
+        if (!$user || $user->id_role != 1) {
+            return redirect('/')->with('error', 'Bạn không có quyền truy cập trang này');
+        }
+
+        if (!Auth::check()) {
+            return redirect()->route('index-login')->with('error', 'Vui lòng đăng nhập để tiếp tục.');
+        }
         $categorys = CategoryMenu::all();
         return view('admin.menu.create', compact('categorys'));
     }
