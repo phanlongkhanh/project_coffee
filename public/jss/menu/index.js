@@ -48,7 +48,17 @@ function confirmEdit(url) {
         cancelButtonText: 'Hủy'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = url;
+            Swal.fire({
+                title: 'Đang chuyển hướng...',
+                text: 'Vui lòng chờ...',
+                icon: 'info',
+                timer: 1500,
+                showConfirmButton: false
+            });
+
+            setTimeout(() => {
+                window.location.href = url;
+            }, 1500);
         }
     });
 }
