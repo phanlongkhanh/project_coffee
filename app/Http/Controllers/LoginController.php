@@ -34,7 +34,11 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('index-dashboard');
+            // Kiểm tra quyền của user sau khi đăng nhập
+            if (Auth::user()->id_role == 1) {
+                return redirect()->route('index-dashboard'); 
+            }
+            return redirect('/');
         }
 
         return redirect()->back()

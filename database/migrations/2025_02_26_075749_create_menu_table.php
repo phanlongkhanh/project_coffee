@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name')->comment('Tên Sản Phẩm');
             $table->string(column: 'image')->default(value: 'profile.jpg');
-            $table->unsignedBigInteger('amount')->comment('Số lượng');
             $table->unsignedBigInteger('price')->comment('Giá tiền');
             $table->unsignedBigInteger('id_category_menu')->comment('Danh Mục');
             $table->timestamps();

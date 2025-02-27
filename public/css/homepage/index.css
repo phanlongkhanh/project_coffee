@@ -1,0 +1,51 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+/* Thanh điều hướng */
+.navbar {
+    background: #4CAF50 !important;
+    padding: 12px 0;
+}
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: white !important;
+}
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+.navbar-nav .nav-link:hover, .dropdown-item:hover {
+    color: #FF9800 !important;
+    transition: 0.3s;
+}
+.dropdown-menu {
+    background: #ffffff;
+    border-radius: 10px;
+}
+.dropdown-item {
+    color: #333;
+}
+/* Nút */
+.btn-custom {
+    background: #FF9800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.3);
+}
+.btn-custom:hover {
+    background: #e68900;
+    transition: 0.3s;
+}
+/* Footer */
+.footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}

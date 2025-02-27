@@ -25,6 +25,7 @@
         </div>
     @endif
 
+
     <!-- Form thêm món -->
     <div class="card p-4">
         <form action="{{ route('store-menu') }}" method="POST" enctype="multipart/form-data">
@@ -44,13 +45,6 @@
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
-            </div>
-            
-
-            <div class="mb-3">
-                <label for="amount" class="form-label">Số Lượng</label>
-                <input type="number" class="form-control" id="amount" name="amount" value="{{ old('amount') }}"
-                    required min="1">
             </div>
 
             <div class="mb-3">
