@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('use.login.index');
+        return view('user.login.index');
     }
 
     public function LogOut()

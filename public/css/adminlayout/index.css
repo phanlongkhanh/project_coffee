@@ -36,7 +36,7 @@
 /* Đẩy nội dung chính sang phải */
 .content {
     margin-left: 250px;
-    margin-top: 56px;
+    margin-top: 0px;
     padding: 20px;
     background-color: #f8f9fa;
     /* Nền sáng */

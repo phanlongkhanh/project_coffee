@@ -12,7 +12,7 @@
         <a href="{{ route('create-menu') }}" class="btn btn-primary btn-lg">
             ➕ Thêm Món
         </a>
-        <a href="{{ route('create-menu') }}" class="btn btn-primary btn-lg">
+        <a href="{{ route('index-category-menu') }}" class="btn btn-primary btn-lg">
             📋 Danh Mục
         </a>
     </div>

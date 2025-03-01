@@ -19,6 +19,10 @@ class CategoryMenuTableSeeder extends Seeder
             ['name' => 'Trà Sữa'],
             ['name' => 'Nước Ép'],
             ['name' => 'Sinh Tố'],
+            ['name' => 'Trà Trái Cây'],
+            ['name' => 'Soda'],
+            ['name' => 'Cà Phê'],
+            ['name' => 'Đồ Uống Có Cồn'],
         ]);
     }
 }
