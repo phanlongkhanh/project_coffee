@@ -59,11 +59,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button"
                             data-bs-toggle="dropdown">
-                            <b style="margin-left: 10px ; magrin-right:20px ;"
+                            <b style="margin-left: 50px; magrin-right:20px;"
                                 class="text-white">{{ $users->name }}</b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{route('index-profile')}}">Thông Tin Cá Nhân</a></li>
+                            <li><a class="dropdown-item" href="{{ route('index-profile') }}">Thông Tin Cá Nhân</a></li>
                             <li><a class="dropdown-item" href="{{ route('logout') }}">Đăng Xuất</a></li>
                         </ul>
                     </li>

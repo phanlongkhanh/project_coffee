@@ -42,7 +42,7 @@
 
             <div class="col-md-8 border p-3">
                 @if ($users)
-                    <form action="#" method="POST">
+                    <form action="{{ route('update-profile', ['id' => $users->id]) }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">Họ Tên</label>
@@ -72,7 +72,7 @@
             <div class="col-md-4 border shadow-lg mt-2 p-3">
                 <!-- Form tải ảnh đại diện -->
                 <h3 class="mt-5">Tải Ảnh Đại Diện</h3>
-                <form action="#" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('update-image', ['id' => $users->id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="image" class="form-label">Tải ảnh đại diện</label>
@@ -85,7 +85,7 @@
             <div class="col-md-8 border mt-2 p-3">
                 <!-- Form đổi mật khẩu -->
                 <h3 class="mt-5">Đổi Mật Khẩu</h3>
-                <form action="#" method="POST">
+                <form action="{{ route('update-password', ['id' => $users->id]) }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="current_password" class="form-label">Mật khẩu hiện tại</label>
